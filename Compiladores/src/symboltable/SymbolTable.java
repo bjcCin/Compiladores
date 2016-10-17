@@ -14,6 +14,7 @@ public class SymbolTable {
 
 	private Hashtable<Object, Object> hashtable;
 	//linha teste 123
+	//linha teste 1234
 
 	public SymbolTable() {
 		hashtable = new Hashtable<Object, Object>();
