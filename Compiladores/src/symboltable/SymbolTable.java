@@ -13,6 +13,7 @@ import ast.Type;
 public class SymbolTable {
 
 	private Hashtable<Object, Object> hashtable;
+	//linha teste 123
 
 	public SymbolTable() {
 		hashtable = new Hashtable<Object, Object>();
