@@ -148,7 +148,9 @@ public class SymbolTable {
 
 }// SymbolTable
 
-class Class {
+//A classes abaixo ja existem no mesmo pacote
+/*
+public class Class {
 
 	String id;
 	Hashtable<Object, Method> methods;
@@ -224,7 +226,7 @@ class Class {
 	}
 } // Class
 
-class Variable {
+public class Variable {
 
 	String id;
 	Type type;
@@ -244,7 +246,7 @@ class Variable {
 
 } // Variable
 
-class Method {
+public class Method {
 
 	String id;
 	Type type;
@@ -324,3 +326,4 @@ class Method {
 
 } // Method
 
+*/
