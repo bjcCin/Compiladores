@@ -148,7 +148,7 @@ public class SymbolTable {
 
 }// SymbolTable
 
-public class Class {
+class Class {
 
 	String id;
 	Hashtable<Object, Method> methods;
@@ -224,7 +224,7 @@ public class Class {
 	}
 } // Class
 
-public class Variable {
+class Variable {
 
 	String id;
 	Type type;
@@ -244,7 +244,7 @@ public class Variable {
 
 } // Variable
 
-public class Method {
+class Method {
 
 	String id;
 	Type type;
