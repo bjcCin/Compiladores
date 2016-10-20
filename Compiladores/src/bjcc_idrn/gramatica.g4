@@ -67,61 +67,39 @@ IntegerLiteral
 :	DecimalIntegerLiteral
 ;
 
-fragment
 DecimalIntegerLiteral
 :	DecimalNumeral IntegertypeSuffix?
 ;
 
-fragment
 IntegertypeSuffix
 :	[lL]
 ;
 
-fragment
 DecimalNumeral
-	:	'0'
-|	NonZeroDigit (Digits? | Underscores Digits)
-	;
+:	'0'
+|	[1-9] (Digits? | '_'+ Digits);
 
-	fragment
-	Digits
-	:	Digit (DigitsAndUnderscores? Digit)?
-	;
 
-	fragment
-	Digit
-	:	'0'
-	|	NonZeroDigit
-	;
+Digits
+:	Digit ((DigitOrUnderscore+)? Digit)?;
 
-	fragment
-	NonZeroDigit
-	:	[1-9]
-	;
+Digit
+:	'0'
+|	[1-9]
+;
 
-	fragment
-	DigitsAndUnderscores
-	:	DigitOrUnderscore+
-	;
+DigitOrUnderscore
+:	Digit
+|	'_'
+;
 
-	fragment
-	DigitOrUnderscore
-	:	Digit
-	|	'_'
-	;
+WS
+:   [ \r\t\n]+ -> skip
+;   
 
-	fragment
-	Underscores
-	:	'_'+
-	;
-
-	WS
-	:   [ \r\t\n]+ -> skip
-	;   
-
-	MULTILINE_COMMENT
-	:  '/*' .*? '*/' -> skip
-	;
-	LINE_COMMENT
-	:  '//' .*? '\n' -> skip
-	;
+MULTILINE_COMMENT
+:  '/*' .*? '*/' -> skip
+;
+LINE_COMMENT
+:  '//' .*? '\n' -> skip
+;
