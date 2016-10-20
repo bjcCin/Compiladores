@@ -4,3 +4,9 @@
 /gramaLexer.tokens
 /gramaListener.java
 /gramaParser.java
+/gramatica.tokens
+/gramaticaBaseListener.java
+/gramaticaLexer.java
+/gramaticaLexer.tokens
+/gramaticaListener.java
+/gramaticaParser.java
