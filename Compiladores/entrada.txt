@@ -1,34 +1,6 @@
-class Principal { 
+class Teste { 
 public static void main ( String[] args)
 	{ 
-			System.out.println(12+0+5);
+			System.out.println(30);
 	}
-}
-
-class teste
-extends rato { 
-int x;
-int y;
-
-public int calcula (int x,int y){ 
-int m;
-int e;
- m=x+3;
- e=y+5;
-return m*e 
-; 
-}
-
-}
-
-
-class rato 
-{ 
-public forma dios2 ( forma j)
-{ 
- 
- return j; 
- 
- }
-
 }
