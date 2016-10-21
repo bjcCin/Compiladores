@@ -1,4 +1,4 @@
-grammar gramatica;
+grammar bjcc_idrn;
 
 goal	
 :	mainClass classDeclaration* EOF;
