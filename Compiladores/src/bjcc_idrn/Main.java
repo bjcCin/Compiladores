@@ -44,10 +44,22 @@ public class Main {
 		
 		bjcc_idrnBaseVisitor Ast = new bjcc_idrnBaseVisitor();
 		
+		
 		Program prog = (Program) Ast.visitGoal(parser.goal());
 		
-		prog.accept(new PrettyPrintVisitor());
+//		prog.accept(new PrettyPrintVisitor());
 		
+		
+		
+		//programa na forma de AST - obter objeto a partir do parser...
+//		Program prog = ... ;
+		
+		
+		BuildSymbolTableVisitor stVis = new BuildSymbolTableVisitor();
+		//construindo tabela de símbolos
+		prog.accept(stVis); 
+		//fazendo a checagem de tipos
+		prog.accept(new TypeCheckVisitor(stVis.getSymbolTable())); 
 	
 		
 	}
